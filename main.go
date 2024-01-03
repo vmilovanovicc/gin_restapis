@@ -12,7 +12,7 @@ func HomeHandler(c *gin.Context) {
 func main() {
 	router := gin.Default()
 	router.GET("/", HomeHandler)
-	router.GET("/tasks", GetTasksHandler)
+	router.GET("/tasks/", GetTasksHandler)
 	router.POST("/task", NewTaskHandler)
 	router.PUT("/task/:id", UpdateTaskHandler)
 	router.DELETE("/task/:id", DeleteTaskHandler)
